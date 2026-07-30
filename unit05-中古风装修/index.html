@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>05套 · 中古风装修设计图纸</title>
+<style>
+  :root {
+    --walnut: #5c4028;
+    --teak: #8b5a2b;
+    --cream: #f5edde;
+    --paper: #fcf8f0;
+    --sage: #8a9a7b;
+    --mustard: #c49a48;
+    --ink: #2a2622;
+    --soft: #e8decd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(196,154,72,.12), transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(138,154,123,.15), transparent 45%),
+      linear-gradient(160deg, #f7f0e4 0%, #ebe2d2 50%, #e4d8c4 100%);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .hero {
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: -20% 30% auto -10%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(92,64,40,.08), transparent 70%);
+    animation: drift 14s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translate(0, 0); }
+    to { transform: translate(40px, 30px); }
+  }
+  .hero-inner { position: relative; max-width: 820px; }
+  .brand {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--walnut);
+    line-height: 1.05;
+  }
+  .hero h1 {
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    font-weight: 500;
+    margin-top: .8rem;
+    color: var(--ink);
+  }
+  .hero p {
+    margin: 1.2rem auto 0;
+    max-width: 34em;
+    font-size: 1.05rem;
+    color: #5a5046;
+    font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    font-size: .95rem;
+    color: var(--teak);
+  }
+  .meta span {
+    border-bottom: 1px solid var(--mustard);
+    padding-bottom: 2px;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background: rgba(252,248,240,.85);
+    border-top: 1px solid var(--soft);
+    border-bottom: 1px solid var(--soft);
+    padding: .75rem 1rem;
+    display: flex;
+    gap: .5rem;
+    overflow-x: auto;
+    justify-content: center;
+    font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    font-size: .85rem;
+  }
+  nav a {
+    color: var(--walnut);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: .4rem .75rem;
+    border-radius: 2px;
+  }
+  nav a:hover { background: var(--cream); }
+  main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 5rem; }
+  section {
+    margin: 3rem 0;
+    scroll-margin-top: 4rem;
+  }
+  section h2 {
+    font-size: 1.6rem;
+    color: var(--walnut);
+    margin-bottom: .4rem;
+  }
+  section .sub {
+    font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    color: #6b6156;
+    margin-bottom: 1.25rem;
+    font-size: .95rem;
+  }
+  figure {
+    background: var(--paper);
+    border: 1px solid var(--soft);
+    padding: .75rem;
+    margin: 0 0 1rem;
+  }
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .mood-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .mood-grid figure { margin: 0; }
+  .mood-grid figcaption {
+    font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    font-size: .85rem;
+    padding: .6rem .25rem 0;
+    color: #6b6156;
+  }
+  .card-free {
+    font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 1rem;
+  }
+  .card-free article {
+    padding: 1.25rem 0;
+    border-top: 2px solid var(--teak);
+  }
+  .card-free h3 {
+    font-family: Georgia, "Songti SC", serif;
+    color: var(--walnut);
+    margin-bottom: .5rem;
+  }
+  .card-free p, .card-free li {
+    font-size: .92rem;
+    color: #4a433c;
+  }
+  .card-free ul { padding-left: 1.1rem; }
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #8a7e70;
+    font-family: "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    font-size: .85rem;
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">05</div>
+      <h1>中古风装修设计图纸</h1>
+      <p>以胡桃木与奶油色为底，鼠尾草绿与黄铜为点缀——为 90.23㎡ 的 05 套量身定制的中古氛围居所。</p>
+      <div class="meta">
+        <span>建筑面积 90.23㎡</span>
+        <span>两室一厅一卫 + 书房</span>
+        <span>南向双半阳台</span>
+        <span>Mid-Century Modern</span>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#concept">概念</a>
+    <a href="#a01">分隔图</a>
+    <a href="#a02">家具</a>
+    <a href="#a03">材质</a>
+    <a href="#a04">立面</a>
+    <a href="#a05">照明</a>
+    <a href="#mood">氛围</a>
+  </nav>
+
+  <main>
+    <section id="concept">
+      <h2>A-00 封面与设计概念</h2>
+      <p class="sub">动线清晰 · 南向采光优先 · 中古暖调贯穿</p>
+      <figure><img src="assets/A00_封面.png" alt="封面" /></figure>
+      <figure><img src="assets/A00b_设计概念.png" alt="设计概念" /></figure>
+      <div class="card-free">
+        <article>
+          <h3>格局策略</h3>
+          <p>北侧入户，西厨东卧，客餐厅贯通南向。书房可改第三卧或儿童房，适应家庭结构变化。</p>
+        </article>
+        <article>
+          <h3>风格关键词</h3>
+          <ul>
+            <li>胡桃 / 柚木暖木系统</li>
+            <li>奶油墙面 + 鼠尾草绿软装</li>
+            <li>黄铜五金与飞碟灯</li>
+            <li>椭圆茶几、圆餐桌、圆角柜体</li>
+          </ul>
+        </article>
+        <article>
+          <h3>空间清单</h3>
+          <ul>
+            <li>主卧 12.2㎡ · 次卧 11.5㎡</li>
+            <li>书房 10.2㎡ · 客厅 11.4㎡</li>
+            <li>餐厅 8.6㎡ · 厨房 9.6㎡</li>
+            <li>卫生间 5.6㎡ · 玄关 / 衣帽</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="a01">
+      <h2>A-01 平面分隔图</h2>
+      <p class="sub">比例约 1:50 · 依据原建筑轮廓推拟（电梯厅北入、南向双半阳台）</p>
+      <figure><img src="assets/A01_平面分隔图.png" alt="平面分隔图" /></figure>
+    </section>
+
+    <section id="a02">
+      <h2>A-02 家具布置图</h2>
+      <p class="sub">中古家具配置 · 柚木餐桌 · 鼠尾草沙发 · 胡桃木柜体</p>
+      <figure><img src="assets/A02_家具布置图.png" alt="家具布置图" /></figure>
+    </section>
+
+    <section id="a03">
+      <h2>A-03 材质与色彩</h2>
+      <p class="sub">暖木 × 奶油 × 鼠尾草 × 黄铜</p>
+      <figure><img src="assets/A03_材质色彩.png" alt="材质色彩" /></figure>
+    </section>
+
+    <section id="a04">
+      <h2>A-04 立面示意</h2>
+      <p class="sub">客餐厅南立面 · 厨房柜体 · 主卧床头 · 玄关</p>
+      <figure><img src="assets/A04_立面示意.png" alt="立面示意" /></figure>
+    </section>
+
+    <section id="a05">
+      <h2>A-05 天花照明图</h2>
+      <p class="sub">2700K 暖光分层 · 飞碟灯 / 黄铜吊灯 / 灯带 / 壁灯</p>
+      <figure><img src="assets/A05_天花照明图.png" alt="天花照明图" /></figure>
+    </section>
+
+    <section id="mood">
+      <h2>氛围参考</h2>
+      <p class="sub">客厅 · 厨房 · 主卧意境图（风格示意，非实景渲染）</p>
+      <div class="mood-grid">
+        <figure>
+          <img src="assets/mood_living.png" alt="客厅氛围" />
+          <figcaption>客厅 — 鼠尾草沙发 · 柚木茶几 · 飞碟灯</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/mood_kitchen.png" alt="厨房氛围" />
+          <figcaption>厨房 — 胡桃木柜 · 黄铜把手 · 复古花砖</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/mood_bedroom.png" alt="主卧氛围" />
+          <figcaption>主卧 — 木饰床头墙 · 壁灯 · 亚麻帘</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    05套中古风装修设计图纸 · 供方案沟通参考 · 施工前请结合原建筑结构图与现场复核
+  </footer>
+</body>
+</html>
