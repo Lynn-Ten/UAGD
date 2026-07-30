@@ -460,31 +460,28 @@
               Width 11.4m → 1140 units, Depth interior ~7.8m + balconies
             -->
 
-            <!-- Rooms: fill first, then walls -->
+            <!-- Rooms: non-overlapping grid fitted to Unit 05 shell -->
 
             <!-- 次卧二 (NW wing) -->
             <rect class="room-hot" data-room="bed2" x="140" y="168" width="280" height="210" fill="url(#wood)" stroke="#2c261f" stroke-width="3"/>
-            <!-- 玄关 / 过道北 -->
+            <!-- 玄关 -->
             <rect class="room-hot" data-room="entry" x="420" y="168" width="160" height="120" fill="#efe6d8" stroke="#2c261f" stroke-width="3"/>
-            <!-- 厨房 (NE wing) -->
-            <rect class="room-hot" data-room="kitchen" x="580" y="168" width="300" height="200" fill="url(#tile)" stroke="#2c261f" stroke-width="3"/>
+            <!-- 厨房 (NE) -->
+            <rect class="room-hot" data-room="kitchen" x="580" y="168" width="300" height="180" fill="url(#tile)" stroke="#2c261f" stroke-width="3"/>
             <!-- 公卫 -->
-            <rect class="room-hot" data-room="bath" x="880" y="168" width="140" height="200" fill="#d9e0d4" stroke="#2c261f" stroke-width="3"/>
+            <rect class="room-hot" data-room="bath" x="880" y="168" width="140" height="180" fill="#d9e0d4" stroke="#2c261f" stroke-width="3"/>
 
+            <!-- 餐厅（玄关正南） -->
+            <rect class="room-hot" data-room="dining" x="420" y="288" width="160" height="160" fill="#f0e6d6" stroke="#2c261f" stroke-width="3"/>
             <!-- 次卧一 (西中) -->
-            <rect class="room-hot" data-room="bed1" x="140" y="378" width="240" height="200" fill="url(#wood)" stroke="#2c261f" stroke-width="3"/>
-            <!-- 餐厅 -->
-            <rect class="room-hot" data-room="dining" x="380" y="288" width="280" height="160" fill="#f0e6d6" stroke="#2c261f" stroke-width="3"/>
-            <!-- 走廊 -->
-            <rect class="room-hot" data-room="hall" x="420" y="288" width="160" height="0" fill="none" stroke="none"/>
-            <!-- 过道延伸 (dining already covers) -->
-
-            <!-- 主卧 SW -->
+            <rect class="room-hot" data-room="bed1" x="140" y="378" width="280" height="200" fill="url(#wood)" stroke="#2c261f" stroke-width="3"/>
+            <!-- 客厅（东南，上接厨卫南沿） -->
+            <rect class="room-hot" data-room="living" x="580" y="348" width="440" height="390" fill="#ebe2d4" stroke="#2c261f" stroke-width="3"/>
+            <!-- 过道 -->
+            <rect class="room-hot" data-room="hall" x="420" y="448" width="160" height="130" fill="#efe6d8" stroke="#2c261f" stroke-width="3"/>
+            <!-- 主卧 + 主卫 -->
             <rect class="room-hot" data-room="master" x="140" y="578" width="280" height="160" fill="url(#wood)" stroke="#2c261f" stroke-width="3"/>
-            <!-- 主卫 -->
-            <rect class="room-hot" data-room="ensuite" x="420" y="578" width="120" height="160" fill="#d9e0d4" stroke="#2c261f" stroke-width="3"/>
-            <!-- 客厅 -->
-            <rect class="room-hot" data-room="living" x="540" y="448" width="480" height="290" fill="#ebe2d4" stroke="#2c261f" stroke-width="3"/>
+            <rect class="room-hot" data-room="ensuite" x="420" y="578" width="160" height="160" fill="#d9e0d4" stroke="#2c261f" stroke-width="3"/>
 
             <!-- Balconies south -->
             <rect class="room-hot" data-room="bal2" x="160" y="748" width="220" height="70" fill="#e5efe8" stroke="#2c261f" stroke-width="2.5"/>
@@ -548,17 +545,19 @@
               <text x="260" y="470" font-size="15" font-weight="600">次卧一</text>
               <text x="260" y="490" font-size="11" fill="#6e6458">≈10.2㎡</text>
 
-              <text x="520" y="360" font-size="15" font-weight="600">餐厅</text>
-              <text x="520" y="380" font-size="11" fill="#6e6458">≈8.8㎡</text>
+              <text x="500" y="355" font-size="15" font-weight="600">餐厅</text>
+              <text x="500" y="375" font-size="11" fill="#6e6458">≈8.8㎡</text>
+
+              <text x="500" y="520" font-size="13" font-weight="600">过道</text>
 
               <text x="280" y="650" font-size="15" font-weight="600">主卧</text>
               <text x="280" y="670" font-size="11" fill="#6e6458">≈12.8㎡</text>
 
-              <text x="480" y="655" font-size="13" font-weight="600">主卫</text>
-              <text x="480" y="673" font-size="11" fill="#6e6458">≈3.6㎡</text>
+              <text x="500" y="650" font-size="13" font-weight="600">主卫</text>
+              <text x="500" y="668" font-size="11" fill="#6e6458">≈3.6㎡</text>
 
-              <text x="780" y="580" font-size="16" font-weight="600">客厅</text>
-              <text x="780" y="602" font-size="11" fill="#6e6458">≈22.4㎡</text>
+              <text x="800" y="540" font-size="16" font-weight="600">客厅</text>
+              <text x="800" y="562" font-size="11" fill="#6e6458">≈22.4㎡</text>
 
               <text x="270" y="788" font-size="12" font-weight="600">05半阳2</text>
               <text x="840" y="788" font-size="12" font-weight="600">05半阳1</text>
@@ -629,16 +628,17 @@
         </div>
         <div class="plan-stage">
           <svg viewBox="0 0 1180 860" xmlns="http://www.w3.org/2000/svg" aria-label="家具布置图">
-            <!-- Base rooms lighter -->
+            <!-- Base rooms — match A-01 -->
             <rect x="140" y="168" width="280" height="210" fill="#f3e9db" stroke="#2c261f" stroke-width="3"/>
             <rect x="420" y="168" width="160" height="120" fill="#efe6d8" stroke="#2c261f" stroke-width="3"/>
-            <rect x="580" y="168" width="300" height="200" fill="#eee6da" stroke="#2c261f" stroke-width="3"/>
-            <rect x="880" y="168" width="140" height="200" fill="#e2e8df" stroke="#2c261f" stroke-width="3"/>
-            <rect x="140" y="378" width="240" height="200" fill="#f3e9db" stroke="#2c261f" stroke-width="3"/>
-            <rect x="380" y="288" width="280" height="160" fill="#f0e6d6" stroke="#2c261f" stroke-width="3"/>
+            <rect x="580" y="168" width="300" height="180" fill="#eee6da" stroke="#2c261f" stroke-width="3"/>
+            <rect x="880" y="168" width="140" height="180" fill="#e2e8df" stroke="#2c261f" stroke-width="3"/>
+            <rect x="420" y="288" width="160" height="160" fill="#f0e6d6" stroke="#2c261f" stroke-width="3"/>
+            <rect x="140" y="378" width="280" height="200" fill="#f3e9db" stroke="#2c261f" stroke-width="3"/>
+            <rect x="580" y="348" width="440" height="390" fill="#ebe2d4" stroke="#2c261f" stroke-width="3"/>
+            <rect x="420" y="448" width="160" height="130" fill="#efe6d8" stroke="#2c261f" stroke-width="3"/>
             <rect x="140" y="578" width="280" height="160" fill="#f3e9db" stroke="#2c261f" stroke-width="3"/>
-            <rect x="420" y="578" width="120" height="160" fill="#e2e8df" stroke="#2c261f" stroke-width="3"/>
-            <rect x="540" y="448" width="480" height="290" fill="#ebe2d4" stroke="#2c261f" stroke-width="3"/>
+            <rect x="420" y="578" width="160" height="160" fill="#e2e8df" stroke="#2c261f" stroke-width="3"/>
             <rect x="160" y="748" width="220" height="70" fill="#e5efe8" stroke="#2c261f" stroke-width="2.5"/>
             <rect x="700" y="748" width="280" height="70" fill="#e5efe8" stroke="#2c261f" stroke-width="2.5"/>
             <rect x="400" y="748" width="280" height="28" fill="#cfc4b4" stroke="#2c261f" stroke-width="2"/>
@@ -659,19 +659,19 @@
             <!-- rug -->
             <rect x="580" y="500" width="280" height="180" rx="4" fill="none" stroke="#c4a35a" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.7"/>
 
-            <!-- Dining table -->
-            <rect x="440" y="330" width="140" height="70" rx="6" fill="#6b4a2e" stroke="#4a3220" stroke-width="1.2"/>
-            <circle cx="455" cy="348" r="8" fill="#c4a35a"/>
-            <circle cx="565" cy="348" r="8" fill="#c4a35a"/>
-            <circle cx="455" cy="382" r="8" fill="#8b6340"/>
-            <circle cx="500" cy="348" r="8" fill="#8b6340"/>
-            <circle cx="500" cy="382" r="8" fill="#8b6340"/>
-            <circle cx="565" cy="382" r="8" fill="#8b6340"/>
-            <text x="510" y="372" text-anchor="middle" font-size="11" fill="#f3ebe0">餐台</text>
+            <!-- Dining table (fits 160-wide dining) -->
+            <rect x="445" y="320" width="110" height="70" rx="6" fill="#6b4a2e" stroke="#4a3220" stroke-width="1.2"/>
+            <circle cx="460" cy="338" r="7" fill="#c4a35a"/>
+            <circle cx="540" cy="338" r="7" fill="#c4a35a"/>
+            <circle cx="460" cy="372" r="7" fill="#8b6340"/>
+            <circle cx="500" cy="338" r="7" fill="#8b6340"/>
+            <circle cx="500" cy="372" r="7" fill="#8b6340"/>
+            <circle cx="540" cy="372" r="7" fill="#8b6340"/>
+            <text x="500" y="362" text-anchor="middle" font-size="11" fill="#f3ebe0">餐台</text>
 
             <!-- Kitchen counters -->
             <rect x="600" y="188" width="260" height="45" fill="#d9d0c2" stroke="#4a3220" stroke-width="1"/>
-            <rect x="600" y="188" width="45" height="150" fill="#d9d0c2" stroke="#4a3220" stroke-width="1"/>
+            <rect x="600" y="188" width="45" height="140" fill="#d9d0c2" stroke="#4a3220" stroke-width="1"/>
             <rect x="700" y="270" width="120" height="40" rx="3" fill="#8b6340" stroke="#4a3220" stroke-width="1"/>
             <circle cx="730" cy="290" r="7" fill="#6b7355"/>
             <circle cx="760" cy="290" r="7" fill="#6b7355"/>
@@ -708,8 +708,9 @@
             <rect x="900" y="200" width="50" height="30" rx="4" fill="#cfd8d0" stroke="#4a3220"/>
             <circle cx="970" cy="280" r="16" fill="#cfd8d0" stroke="#4a3220"/>
             <rect x="900" y="300" width="40" height="45" fill="#b8c4ba" stroke="#4a3220"/>
-            <rect x="440" y="600" width="45" height="30" rx="4" fill="#cfd8d0" stroke="#4a3220"/>
-            <rect x="440" y="670" width="80" height="45" fill="#b8c4ba" stroke="#4a3220"/>
+            <rect x="440" y="600" width="50" height="30" rx="4" fill="#cfd8d0" stroke="#4a3220"/>
+            <rect x="450" y="670" width="100" height="45" fill="#b8c4ba" stroke="#4a3220"/>
+            <circle cx="530" cy="630" r="14" fill="#cfd8d0" stroke="#4a3220"/>
 
             <!-- Balcony lounge -->
             <rect x="200" y="762" width="50" height="35" rx="8" fill="#c4a35a" stroke="#4a3220"/>
@@ -963,7 +964,7 @@
       },
       hall: {
         title: "过道",
-        body: "连接玄关、餐厅与各房间的动线核心。"
+        body: "连接餐厅、主卧、主卫与客厅的夜区动线，墙面可做矮柜或挂画。"
       }
     };
 
